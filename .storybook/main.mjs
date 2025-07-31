@@ -41,19 +41,19 @@ const config = {
     },
   },
   viteFinal: async (config) => {
-    // Import the React plugin here - CRITICAL for static deployment
+    // Import the React plugin here - EXACTLY as documented in your notes
     const { default: react } = await import('@vitejs/plugin-react');
 
-    // CRITICAL: Replace plugins array, don't just push (solution from developer notes)
-    config.plugins = [
-      react(),
-      ...config.plugins || [],
-    ];
+    // EXACT SOLUTION from your component-rendering-issue.md notes
+    if (!config.plugins) {
+      config.plugins = [];
+    }
+    config.plugins.push(react());
 
-    // Static deployment fixes
+    // Static deployment base path fix
     config.base = './';
     
-    // Custom Vite configuration for monorepo
+    // Custom Vite configuration for monorepo (from your working local config)
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
@@ -66,7 +66,7 @@ const config = {
       };
     }
 
-    // Configure CSS modules
+    // Configure CSS modules (from your working config)
     config.css = {
       ...config.css,
       modules: {
@@ -74,20 +74,7 @@ const config = {
       },
     };
 
-    // Configure file watching for local development
-    config.server = {
-      ...config.server,
-      watch: {
-        ignored: [
-          '**/node_modules/**',
-          '**/.nx/cache/**',
-          '**/dist/**',
-          '**/coverage/**',
-        ],
-      },
-    };
-
-    // Optimize for monorepo - include React and ensure it's available
+    // Optimize for monorepo - ensure React is available (from your notes)
     config.optimizeDeps = {
       ...config.optimizeDeps,
       include: [
@@ -110,7 +97,7 @@ const config = {
       ]
     };
 
-    // Ensure single instance of @emotion/react
+    // Ensure single instance of @emotion/react (from your working fixes)
     config.resolve.dedupe = [
       ...config.resolve.dedupe || [],
       '@emotion/react',
