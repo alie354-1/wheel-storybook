@@ -41,19 +41,18 @@ const config = {
     },
   },
   viteFinal: async (config) => {
-    // Import the React plugin here
+    // Import the React plugin here - CRITICAL for static deployment
     const { default: react } = await import('@vitejs/plugin-react');
 
-    // Add React plugin to Vite config
-    if (!config.plugins) {
-      config.plugins = [];
-    }
-    config.plugins.push(react());
+    // CRITICAL: Replace plugins array, don't just push (solution from developer notes)
+    config.plugins = [
+      react(),
+      ...config.plugins || [],
+    ];
 
-    // ✨ STATIC DEPLOYMENT FIX ✨
-    // Fix base path for static deployment
+    // Static deployment fixes
     config.base = './';
-
+    
     // Custom Vite configuration for monorepo
     if (config.resolve) {
       config.resolve.alias = {
@@ -75,7 +74,7 @@ const config = {
       },
     };
 
-    // Configure file watching to ignore NX cache files to prevent constant reloads
+    // Configure file watching for local development
     config.server = {
       ...config.server,
       watch: {
@@ -87,32 +86,6 @@ const config = {
         ],
       },
     };
-
-    // Configure environment variables for Storybook
-    config.define = {
-      ...config.define,
-      'import.meta.env.VITE_SUPABASE_URL': JSON.stringify('https://mock-supabase-url.com'),
-      'import.meta.env.VITE_SUPABASE_ANON_KEY': JSON.stringify('mock-supabase-anon-key'),
-      'import.meta.env.STORYBOOK': JSON.stringify('true'),
-    };
-
-    // Performance optimizations with static deployment fixes
-    if (config.build) {
-      config.build.assetsDir = 'assets';
-      config.build.rollupOptions = {
-        ...config.build.rollupOptions,
-        output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom'],
-            storybook: ['@storybook/react'],
-          },
-          // ✨ STATIC DEPLOYMENT ASSET FIXES ✨
-          assetFileNames: 'assets/[name]-[hash][extname]',
-          chunkFileNames: 'assets/[name]-[hash].js',
-          entryFileNames: 'assets/[name]-[hash].js',
-        },
-      };
-    }
 
     // Optimize for monorepo - include React and ensure it's available
     config.optimizeDeps = {
