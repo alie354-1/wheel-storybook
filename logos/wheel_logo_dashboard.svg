@@ -1,0 +1,21 @@
+<svg width="250" height="70" viewBox="0 0 250 70" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dashboard Logo - Professional Interface -->
+  
+  <!-- Circle 1 - Foundation -->
+  <circle cx="18" cy="35" r="7" fill="#1e1b4b" opacity="0.95"/>
+  
+  <!-- Circle 2 - Growth -->
+  <circle cx="31" cy="35" r="9" fill="#312e81" opacity="0.8"/>
+  
+  <!-- Circle 3 - Scale -->
+  <circle cx="48" cy="35" r="12" fill="#3730a3" opacity="0.65"/>
+  
+  <!-- Circle 4 - Optimize -->
+  <circle cx="70" cy="35" r="16" fill="#d97706" opacity="0.5"/>
+  
+  <!-- Circle 5 - Legacy -->
+  <circle cx="98" cy="35" r="22" fill="#f59e0b" opacity="0.3"/>
+  
+  <!-- Wordmark -->
+  <text x="130" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1e1b4b">THE</text>
+  <text x="130" y="50" font-family="Inter, sans-serif

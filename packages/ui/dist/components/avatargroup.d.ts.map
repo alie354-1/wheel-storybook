@@ -1,0 +1,1 @@
+{"version":3,"file":"avatargroup.d.ts","sourceRoot":"","sources":["../../src/components/avatargroup.tsx"],"names":[],"mappings":"AAAA;;;;GAIG;AAGH,OAAO,KAAK,EAAE,EAAc,SAAS,EAAE,MAAM,OAAO,CAAC;AAErD,MAAM,WAAW,gBAAgB;IAC/B,QAAQ,EAAE,SAAS,CAAC;IACpB,GAAG,CAAC,EAAE,MAAM,CAAC;IACb,SAAS,CAAC,EAAE,MAAM,CAAC;CACpB;AAED,eAAO,MAAM,WAAW,yFAsBtB,CAAC"}

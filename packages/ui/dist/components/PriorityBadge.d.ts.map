@@ -1,0 +1,1 @@
+{"version":3,"file":"PriorityBadge.d.ts","sourceRoot":"","sources":["../../src/components/PriorityBadge.tsx"],"names":[],"mappings":"AAEA,KAAK,QAAQ,GAAG,MAAM,GAAG,QAAQ,GAAG,KAAK,CAAC;AAE1C,UAAU,kBAAkB;IAC1B,QAAQ,EAAE,QAAQ,CAAC;IACnB,KAAK,CAAC,EAAE,MAAM,CAAC;CAChB;AAED,wBAAgB,aAAa,CAAC,EAAE,QAAQ,EAAE,KAAK,EAAE,EAAE,kBAAkB,2CAapE"}

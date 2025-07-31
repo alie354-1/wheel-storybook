@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  design-system:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"  # Storybook
+      - "3001:3001"  # Development server
+      - "3002:3002"  # WebSocket server
+    environment:
+      - NODE_ENV=development
+      - WORKSPACE_CONTEXTS=consultant,client,admin,expert,toolCreator,founder
+    command: npm run dev:full
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: wheel_design_system
+      POSTGRES_USER: wheel_dev
+      POSTGRES_PASSWORD: local_dev_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:

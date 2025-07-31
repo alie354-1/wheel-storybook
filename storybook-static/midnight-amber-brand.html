@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE WHEEL - Intelligent Founder Platform Brand System</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            overflow-x: hidden;
+        }
+        
+        .page {
+            min-height: 100vh;
+            padding: 80px 40px;
+            position: relative;
+        }
+        
+        .cover {
+            background: linear-gradient(135deg, #0f0c29 0%, #1e1b4b 25%, #312e81 50%, #d97706 75%, #f59e0b 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 80%, rgba(245, 158, 11, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(30, 27, 75, 0.4) 0%, transparent 50%);
+            animation: ambient 20s ease-in-out infinite alternate;
+        }
+        
+        @keyframes ambient {
+            0% { opacity: 0.8; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+        
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin: 100px 0;
+        }
+        
+        h1 {
+            font-size: 84px;
+            font-weight: 900;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            color: #fbbf24;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 60px;
+            color: #1e1b4b;
+            letter-spacing: -1px;
+        }
+        
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #312e81;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+        
+        h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+        
+        .small-text {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 50px;
+        }
+        
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        @media (max-width: 1200px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            h1 { font-size: 56px; }
+            .tagline { font-size: 28px; }
+            h2 { font-size: 36px; }
+            .page { padding: 40px 20px; }
+        }
+        
+        .logo-showcase {
+            background: #f8fafc;
+            padding: 80px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-showcase:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .logo-showcase.platform-hero {
+            background: linear-gradient(135deg, #0f0c29 0%, #1e1b4b 25%, #312e81 50%, #d97706 75%, #f59e0b 100%);
+        }
+        
+        .logo-showcase.founder-dark {
+            background: linear-gradient(135deg, #0f0c29 0%, #1e1b4b 50%, #312e81 100%);
+        }
+        
+        .logo-showcase.vc-light {
+            background: linear-gradient(135deg, #f8fafc 0%, rgba(30, 27, 75, 0.08) 40%, rgba(245, 158, 11, 0.08) 100%);
+            border: 2px solid #e2e8f0;
+        }
+        
+        .logo-showcase.journey-energy {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+        }
+        
+        .component-demo {
+            background: white;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+            margin: 40px 0;
+        }
+        
+        .button-midnight {
+            background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%);
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(30, 27, 75, 0.3);
+            margin: 10px;
+        }
+        
+        .button-midnight:hover {
+            background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(30, 27, 75, 0.4);
+        }
+        
+        .button-amber {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+            margin: 10px;
+        }
+        
+        .button-amber:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(217, 119, 6, 0.4);
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+        }
+        
+        .persona-card {
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-left: 6px solid;
+            margin: 30px 0;
+        }
+        
+        .persona-founder {
+            border-left-color: #d97706;
+        }
+        
+        .persona-vc {
+            border-left-color: #1e1b4b;
+        }
+        
+        .journey-visual {
+            background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #d97706 100%);
+            height: 200px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .journey-path {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .journey-step {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .journey-connector {
+            width: 40px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .platform-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 60px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #1e1b4b 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #64748b;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Cover -->
+    <div class="page">
+        <div class="cover">
+            <div class="cover-content">
+                <!-- CORRECT overlapping circles in hero -->
+                <svg width="280" height="80" viewBox="0 0 280 80" style="margin-bottom: 50px;">
+                    <circle cx="50" cy="40" r="12" fill="white" opacity="0.95" />
+                    <circle cx="70" cy="40" r="15" fill="white" opacity="0.9" />
+                    <circle cx="95" cy="40" r="22" fill="white" opacity="0.8" />
+                    <circle cx="130" cy="40" r="32" fill="white" opacity="0.65" />
+                    <circle cx="175" cy="40" r="48" fill="white" opacity="0.45" />
+                </svg>
+                
+                <h1>THE WHEEL</h1>
+                <p class="tagline">Don't reinvent it. Join it.</p>
+                <p class="subtitle">The intelligent platform guiding startup founders through their journey</p>
+                
+                <div style="margin-top: 80px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                    <div style="background: rgba(255,255,255,0.15); padding: 30px 40px; border-radius: 20px; backdrop-filter: blur(15px); max-width: 280px;">
+                        <h4 style="color: white; margin-bottom: 15px; font-size: 20px;">For Founders</h4>
+                        <p style="font-size: 15px; opacity: 0.9;">AI-powered journey guidance from idea to scale</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 30px 40px; border-radius: 20px; backdrop-filter: blur(15px); max-width: 280px;">
+                        <h4 style="color: white; margin-bottom: 15px; font-size: 20px;">For VCs</h4>
+                        <p style="font-size: 15px; opacity: 0.9;">Portfolio-wide insights and founder support</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 30px 40px; border-radius: 20px; backdrop-filter: blur(15px); max-width: 280px;">
+                        <h4 style="color: white; margin-bottom: 15px; font-size: 20px;">For Studios</h4>
+                        <p style="font-size: 15px; opacity: 0.9;">Systematic advantage for every company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Positioning -->
+    <div class="page">
+        <div class="content">
+            <h3>01. Platform Positioning</h3>
+            <h2>The Intelligent Operating System for Startup Success</h2>
+            
+            <div class="journey-visual">
+                <div class="journey-path">
+                    <div class="journey-step">
+                        <svg width="24" height="24" viewBox="0 0 50 24">
+                            <circle cx="8" cy="12" r="3" fill="white" opacity="0.9" />
+                            <circle cx="14" cy="12" r="4" fill="white" opacity="0.7" />
+                            <circle cx="22" cy="12" r="6" fill="white" opacity="0.5" />
+                        </svg>
+                        <div style="font-size: 10px; margin-top: 5px;">IDEA</div>
+                    </div>
+                    <div class="journey-connector"></div>
+                    <div class="journey-step">
+                        <svg width="24" height="24" viewBox="0 0 50 24">
+                            <circle cx="8" cy="12" r="3" fill="white" opacity="0.9" />
+                            <circle cx="14" cy="12" r="4" fill="white" opacity="0.7" />
+                            <circle cx="22" cy="12" r="6" fill="white" opacity="0.5" />
+                        </svg>
+                        <div style="font-size: 10px; margin-top: 5px;">BUILD</div>
+                    </div>
+                    <div class="journey-connector"></div>
+                    <div class="journey-step">
+                        <svg width="24" height="24" viewBox="0 0 50 24">
+                            <circle cx="8" cy="12" r="3" fill="white" opacity="0.9" />
+                            <circle cx="14" cy="12" r="4" fill="white" opacity="0.7" />
+                            <circle cx="22" cy="12" r="6" fill="white" opacity="0.5" />
+                        </svg>
+                        <div style="font-size: 10px; margin-top: 5px;">LAUNCH</div>
+                    </div>
+                    <div class="journey-connector"></div>
+                    <div class="journey-step">
+                        <svg width="24" height="24" viewBox="0 0 50 24">
+                            <circle cx="8" cy="12" r="3" fill="white" opacity="0.9" />
+                            <circle cx="14" cy="12" r="4" fill="white" opacity="0.7" />
+                            <circle cx="22" cy="12" r="6" fill="white" opacity="0.5" />
+                        </svg>
+                        <div style="font-size: 10px; margin-top: 5px;">SCALE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 20px; color: #1e1b4b; font-weight: 500; line-height: 1.8;">
+                    THE WHEEL transforms how startups are built by providing an intelligent, learning platform that guides founders through their journey while giving VCs and venture studios unprecedented insights into their portfolio companies.
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">BASE</div>
+                    <div class="stat-label">Journey Steps</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">AI</div>
+                    <div class="stat-label">Enhanced Intelligence</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Faster Decisions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Smart Assistance</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Target Audiences -->
+    <div class="page">
+        <div class="content">
+            <h3>02. Target Audiences</h3>
+            <h2>Built for the Startup Ecosystem</h2>
+            
+            <div class="persona-card persona-founder">
+                <div class="grid grid-2" style="align-items: center;">
+                    <div>
+                        <h4 style="color: #d97706; font-size: 24px; margin-bottom: 20px;">🚀 Startup Founders</h4>
+                        <p style="font-size: 18px; color: #1e1b4b; font-weight: 600; margin-bottom: 15px;">The Primary User</p>
+                        <p style="color: #64748b; margin-bottom: 20px; line-height: 1.8;">Early-stage founders navigating the complex journey from idea to scale. Need proven frameworks, AI-powered guidance, and community insights to avoid common pitfalls and accelerate progress.</p>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <span style="background: #fef3c7; color: #d97706; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">Pre-seed to Series A</span>
+                            <span style="background: #fef3c7; color: #d97706; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">First-time founders</span>
+                            <span style="background: #fef3c7; color: #d97706; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">Tech-enabled businesses</span>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="50" height="30" viewBox="0 0 80 30">
+                                <circle cx="10" cy="15" r="4" fill="white" opacity="0.95" />
+                                <circle cx="18" cy="15" r="5" fill="white" opacity="0.8" />
+                                <circle cx="28" cy="15" r="7" fill="white" opacity="0.65" />
+                                <circle cx="42" cy="15" r="10" fill="white" opacity="0.5" />
+                                <circle cx="60" cy="15" r="14" fill="white" opacity="0.3" />
+                            </svg>
+                        </div>
+                        <p style="color: #d97706; font-weight: 600;">Decision Makers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="persona-card persona-vc">
+                <div class="grid grid-2" style="align-items: center;">
+                    <div>
+                        <h4 style="color: #1e1b4b; font-size: 24px; margin-bottom: 20px;">💼 VCs & Venture Studios</h4>
+                        <p style="font-size: 18px; color: #1e1b4b; font-weight: 600; margin-bottom: 15px;">The Strategic Partners</p>
+                        <p style="color: #64748b; margin-bottom: 20px; line-height: 1.8;">Investment professionals and studio operators who want to provide systematic support to their portfolio companies while gaining unprecedented insights into founder progress and company health.</p>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <span style="background: #e0e7ff; color: #1e1b4b; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">Portfolio management</span>
+                            <span style="background: #e0e7ff; color: #1e1b4b; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">Founder support</span>
+                            <span style="background: #e0e7ff; color: #1e1b4b; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">Risk assessment</span>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="50" height="30" viewBox="0 0 80 30">
+                                <circle cx="10" cy="15" r="4" fill="white" opacity="0.95" />
+                                <circle cx="18" cy="15" r="5" fill="white" opacity="0.8" />
+                                <circle cx="28" cy="15" r="7" fill="white" opacity="0.65" />
+                                <circle cx="42" cy="15" r="10" fill="white" opacity="0.5" />
+                                <circle cx="60" cy="15" r="14" fill="white" opacity="0.3" />
+                            </svg>
+                        </div>
+                        <p style="color: #1e1b4b; font-weight: 600;">Portfolio Enablers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo System -->
+    <div class="page">
+        <div class="content">
+            <h3>03. Complete Logo System</h3>
+            <h2>15+ Variations for Every Context</h2>
+            
+            <div class="grid grid-2" style="gap: 60px;">
+                <!-- Platform Hero - EXACT copy from working SVG -->
+                <div class="logo-showcase platform-hero">
+                    <h4 style="color: white; margin-bottom: 40px; font-size: 22px;">Platform Hero</h4>
+                    <svg width="450" height="140" viewBox="0 0 450 140">
+                        <circle cx="50" cy="70" r="10" fill="#1e1b4b" opacity="0.95" />
+                        <circle cx="70" cy="70" r="12" fill="#312e81" opacity="0.85" />
+                        <circle cx="95" cy="70" r="18" fill="#3730a3" opacity="0.75" />
+                        <circle cx="130" cy="70" r="26" fill="#d97706" opacity="0.65" />
+                        <circle cx="175" cy="70" r="38" fill="#f59e0b" opacity="0.45" />
+                        <text x="235" y="85" font-family="Inter" font-size="36" font-weight="700" fill="white">THE WHEEL</text>
+                    </svg>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin-top: 25px;">Landing pages, hero sections, platform branding</p>
+                </div>
+
+                <!-- Founder Dashboard - EXACT copy from working SVG -->
+                <div class="logo-showcase founder-dark">
+                    <h4 style="color: white; margin-bottom: 40px; font-size: 22px;">Founder Dashboard</h4>
+                    <svg width="450" height="140" viewBox="0 0 450 140">
+                        <circle cx="50" cy="70" r="10" fill="white" opacity="0.95" />
+                        <circle cx="70" cy="70" r="12" fill="white" opacity="0.85" />
+                        <circle cx="95" cy="70" r="18" fill="white" opacity="0.75" />
+                        <circle cx="130" cy="70" r="26" fill="white" opacity="0.65" />
+                        <circle cx="175" cy="70" r="38" fill="white" opacity="0.45" />
+                        <text x="235" y="85" font-family="Inter" font-size="36" font-weight="700" fill="white">THE WHEEL</text>
+                    </svg>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin-top: 25px;">App navigation, dark themes, founder interface</p>
+                </div>
+
+                <!-- VC Portal - EXACT copy from working SVG -->
+                <div class="logo-showcase vc-light">
+                    <h4 style="color: #334155; margin-bottom: 40px; font-size: 22px;">VC Portal</h4>
+                    <svg width="450" height="140" viewBox="0 0 450 140">
+                        <circle cx="50" cy="70" r="10" fill="#1e1b4b" opacity="0.95" />
+                        <circle cx="70" cy="70" r="12" fill="#312e81" opacity="0.85" />
+                        <circle cx="95" cy="70" r="18" fill="#3730a3" opacity="0.75" />
+                        <circle cx="130" cy="70" r="26" fill="#d97706" opacity="0.65" />
+                        <circle cx="175" cy="70" r="38" fill="#f59e0b" opacity="0.45" />
+                        <text x="235" y="85" font-family="Inter" font-size="36" font-weight="700" fill="#1a1a1a">THE WHEEL</text>
+                    </svg>
+                    <p style="color: #64748b; font-size: 14px; margin-top: 25px;">VC dashboards, reports, professional contexts</p>
+                </div>
+
+                <!-- Journey Energy -->
+                <div class="logo-showcase journey-energy">
+                    <h4 style="color: white; margin-bottom: 40px; font-size: 22px;">Journey Energy</h4>
+                    <svg width="450" height="140" viewBox="0 0 450 140">
+                        <circle cx="50" cy="70" r="10" fill="white" opacity="0.95" />
+                        <circle cx="70" cy="70" r="12" fill="white" opacity="0.85" />
+                        <circle cx="95" cy="70" r="18" fill="white" opacity="0.75" />
+                        <circle cx="130" cy="70" r="26" fill="white" opacity="0.65" />
+                        <circle cx="175" cy="70" r="38" fill="white" opacity="0.45" />
+                        <text x="235" y="85" font-family="Inter" font-size="36" font-weight="700" fill="white">THE WHEEL</text>
+                    </svg>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin-top: 25px;">Journey milestones, progress tracking, celebrations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Features -->
+    <div class="page">
+        <div class="content">
+            <h3>04. Platform Features</h3>
+            <h2>Core Capabilities That Define THE WHEEL</h2>
+            
+            <div class="platform-features">
+                <div class="feature-card">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%); border-radius: 16px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="32" height="18" viewBox="0 0 50 18">
+                            <circle cx="8" cy="9" r="2" fill="white" opacity="0.95" />
+                            <circle cx="12" cy="9" r="2.5" fill="white" opacity="0.8" />
+                            <circle cx="17" cy="9" r="3.5" fill="white" opacity="0.65" />
+                            <circle cx="24" cy="9" r="5" fill="white" opacity="0.5" />
+                            <circle cx="34" cy="9" r="7" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h4 style="color: #1e1b4b; margin-bottom: 15px;">Intelligent Step System</h4>
+                    <p style="color: #64748b; line-height: 1.6;">Base journey framework that becomes smarter and more personalized the more it's used, with AI-powered recommendations tailored to your progress.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-radius: 16px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="32" height="18" viewBox="0 0 50 18">
+                            <circle cx="8" cy="9" r="2" fill="white" opacity="0.95" />
+                            <circle cx="12" cy="9" r="2.5" fill="white" opacity="0.8" />
+                            <circle cx="17" cy="9" r="3.5" fill="white" opacity="0.65" />
+                            <circle cx="24" cy="9" r="5" fill="white" opacity="0.5" />
+                            <circle cx="34" cy="9" r="7" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h4 style="color: #d97706; margin-bottom: 15px;">AI-Powered Guidance</h4>
+                    <p style="color: #64748b; line-height: 1.6;">Smart recommendations based on your progress, industry data, and successful founder patterns from our learning system.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #312e81 0%, #d97706 100%); border-radius: 16px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="32" height="18" viewBox="0 0 50 18">
+                            <circle cx="8" cy="9" r="2" fill="white" opacity="0.95" />
+                            <circle cx="12" cy="9" r="2.5" fill="white" opacity="0.8" />
+                            <circle cx="17" cy="9" r="3.5" fill="white" opacity="0.65" />
+                            <circle cx="24" cy="9" r="5" fill="white" opacity="0.5" />
+                            <circle cx="34" cy="9" r="7" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h4 style="color: #312e81; margin-bottom: 15px;">Community Intelligence</h4>
+                    <p style="color: #64748b; line-height: 1.6;">Learn from peer founders' real outcomes while maintaining privacy through anonymized insights and shared learnings.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e1b4b 0%, #f59e0b 100%); border-radius: 16px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="32" height="18" viewBox="0 0 50 18">
+                            <circle cx="8" cy="9" r="2" fill="white" opacity="0.95" />
+                            <circle cx="12" cy="9" r="2.5" fill="white" opacity="0.8" />
+                            <circle cx="17" cy="9" r="3.5" fill="white" opacity="0.65" />
+                            <circle cx="24" cy="9" r="5" fill="white" opacity="0.5" />
+                            <circle cx="34" cy="9" r="7" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h4 style="color: #1e1b4b; margin-bottom: 15px;">VC Portfolio Insights</h4>
+                    <p style="color: #64748b; line-height: 1.6;">Portfolio-wide visibility and founder support tools for VCs and venture studios to maximize their companies' success.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #d97706 0%, #1e1b4b 100%); border-radius: 16px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="32" height="18" viewBox="0 0 50 18">
+                            <circle cx="8" cy="9" r="2" fill="white" opacity="0.95" />
+                            <circle cx="12" cy="9" r="2.5" fill="white" opacity="0.8" />
+                            <circle cx="17" cy="9" r="3.5" fill="white" opacity="0.65" />
+                            <circle cx="24" cy="9" r="5" fill="white" opacity="0.5" />
+                            <circle cx="34" cy="9" r="7" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h4 style="color: #d97706; margin-bottom: 15px;">Seamless Integration</h4>
+                    <p style="color: #64748b; line-height: 1.6;">Works within your existing workflow through standup bots and integrations, capturing progress without disruption.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3730a3 0%, #f59e0b 100%); border-radius: 16px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="32" height="18" viewBox="0 0 50 18">
+                            <circle cx="8" cy="9" r="2" fill="white" opacity="0.95" />
+                            <circle cx="12" cy="9" r="2.5" fill="white" opacity="0.8" />
+                            <circle cx="17" cy="9" r="3.5" fill="white" opacity="0.65" />
+                            <circle cx="24" cy="9" r="5" fill="white" opacity="0.5" />
+                            <circle cx="34" cy="9" r="7" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h4 style="color: #3730a3; margin-bottom: 15px;">Learning System</h4>
+                    <p style="color: #64748b; line-height: 1.6;">Platform continuously improves by learning from real founder outcomes, making recommendations more accurate over time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Implementation Guide -->
+    <div class="page">
+        <div class="content">
+            <h3>05. Brand Implementation</h3>
+            <h2>Ready for Platform Deployment</h2>
+            
+            <div class="component-demo">
+                <h4 style="margin-bottom: 30px;">Platform UI Components</h4>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px;">
+                    <button class="button-midnight">Start Journey</button>
+                    <button class="button-amber">Join THE WHEEL</button>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); padding: 40px; border-radius: 16px; margin: 30px 0;">
+                    <h4 style="color: #1e1b4b; margin-bottom: 20px;">Platform Navigation</h4>
+                    <div style="display: flex; align-items: center; gap: 30px; justify-content: center;">
+                        <svg width="160" height="60" viewBox="0 0 160 60">
+                            <circle cx="20" cy="30" r="6" fill="#1e1b4b" opacity="0.9" />
+                            <circle cx="32" cy="30" r="8" fill="#312e81" opacity="0.8" />
+                            <circle cx="48" cy="30" r="12" fill="#3730a3" opacity="0.7" />
+                            <circle cx="70" cy="30" r="18" fill="#d97706" opacity="0.6" />
+                            <circle cx="100" cy="30" r="26" fill="#f59e0b" opacity="0.4" />
+                            <text x="135" y="38" font-family="Inter" font-size="16" font-weight="700" fill="#1e1b4b">THE WHEEL</text>
+                        </svg>
+                        <div style="display: flex; gap: 30px; color: #64748b; font-weight: 500;">
+                            <span>Journey</span>
+                            <span>Progress</span>
+                            <span>Community</span>
+                            <span>Insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #1e1b4b 0%, #d97706 100%); padding: 60px; border-radius: 24px; text-align: center; color: white;">
+                <h2 style="color: white; margin-bottom: 30px;">Ready to Build the Future of Startup Success?</h2>
+                <p style="font-size: 20px; opacity: 0.95; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    THE WHEEL brand system is production-ready for an intelligent platform that will transform how startups are built.
+                </p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <button style="background: white; color: #1e1b4b; padding: 18px 36px; border: none; border-radius: 14px; font-weight: 600; font-size: 16px; cursor: pointer;">Download Brand Assets</button>
+                    <button style="background: rgba(255,255,255,0.2); color: white; padding: 18px 36px; border: 2px solid white; border-radius: 14px; font-weight: 600; font-size: 16px; cursor: pointer;">View Platform Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- VC Portfolio Logo - Professional, Midnight-Dominant -->
+  
+  <!-- Circle 1 - Foundation -->
+  <circle cx="20" cy="40" r="8" fill="#1e1b4b" opacity="0.95"/>
+  
+  <!-- Circle 2 - Growth -->
+  <circle cx="35" cy="40" r="10" fill="#312e81" opacity="0.85"/>
+  
+  <!-- Circle 3 - Scale -->
+  <circle cx="55" cy="40" r="14" fill="#3730a3" opacity="0.75"/>
+  
+  <!-- Circle 4 - Optimize -->
+  <circle cx="80" cy="40" r="18" fill="#d97706" opacity="0.4"/>
+  
+  <!-- Circle 5 - Legacy -->
+  <circle cx="115" cy="40" r="25" fill="#d97706" opacity="0.25"/>
+  
+  <!-- Wordmark -->
+  <text x="155" y="35" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#1e1b4b">THE</text>
+  <text x="155" y="58" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#1e1b4b">WHEEL</text>
+</svg>

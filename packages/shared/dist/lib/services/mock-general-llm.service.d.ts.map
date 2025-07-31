@@ -1,0 +1,1 @@
+{"version":3,"file":"mock-general-llm.service.d.ts","sourceRoot":"","sources":["../../../src/lib/services/mock-general-llm.service.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,YAAY,EAAE,MAAM,uBAAuB,CAAC;AAExE,qBAAa,qBAAsB,YAAW,iBAAiB;;IAGvD,KAAK,CAAC,KAAK,EAAE,MAAM,EAAE,OAAO,EAAE,YAAY,GAAG,OAAO,CAAC,GAAG,CAAC;CAuHhE;AAED,eAAO,MAAM,qBAAqB,uBAA8B,CAAC"}

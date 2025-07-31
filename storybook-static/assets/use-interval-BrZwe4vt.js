@@ -1,0 +1,1 @@
+import{r as t}from"./index-B2-qRKKC.js";function f(r,e){const n=t.useRef(r);t.useEffect(()=>{n.current=r},[r]),t.useEffect(()=>{if(e===null)return;const s=setInterval(()=>n.current(),e);return()=>clearInterval(s)},[e])}export{f as u};

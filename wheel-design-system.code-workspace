@@ -1,0 +1,45 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "."
+    },
+    {
+      "name": "UI Package",
+      "path": "./packages/ui"
+    },
+    {
+      "name": "Themes Package",
+      "path": "./packages/themes"
+    },
+    {
+      "name": "Workspace Package",
+      "path": "./packages/workspace"
+    },
+    {
+      "name": "Patterns Package",
+      "path": "./packages/patterns"
+    },
+    {
+      "name": "Layouts Package",
+      "path": "./packages/layouts"
+    },
+    {
+      "name": "Shared Package",
+      "path": "./packages/shared"
+    },
+    {
+      "name": "Storybook",
+      "path": "./.storybook"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.next": true,
+      "**/coverage": true,
+      "**/.nyc_output": true
+    }
+  }
+}

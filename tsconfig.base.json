@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowImportingTsExtensions": true,
+    "types": ["jest"],
+    "baseUrl": ".",
+    "paths": {
+      "@wheel/ui": ["packages/ui/src"],
+      "@wheel/patterns": ["packages/patterns/src"],
+      "@wheel/layouts": ["packages/layouts/src"],
+      "@wheel/themes": ["packages/themes/src"],
+      "@wheel/workspace": ["packages/workspace/src"],
+      "@wheel/shared/*": ["packages/shared/src/*"],
+      "@wheel/ui/*": ["packages/ui/src/*"],
+      "@wheel/patterns/*": ["packages/patterns/src/*"],
+      "@wheel/layouts/*": ["packages/layouts/src/*"],
+      "@wheel/themes/*": ["packages/themes/src/*"],
+      "@wheel/workspace/*": ["packages/workspace/src/*"]
+    }
+  },
+  "include": [],
+  "references": [
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/themes"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./packages/patterns"
+    },
+    {
+      "path": "./packages/layouts"
+    },
+    {
+      "path": "./packages/workspace"
+    }
+  ]
+}
