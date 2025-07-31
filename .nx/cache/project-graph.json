@@ -1,0 +1,624 @@
+{
+  "nodes": {
+    "@wheel/workspace": {
+      "name": "@wheel/workspace",
+      "type": "lib",
+      "data": {
+        "root": "packages/workspace",
+        "sourceRoot": "packages/workspace",
+        "name": "@wheel/workspace",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "outputs": [
+              "{projectRoot}/coverage"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "type-check": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "type-check"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "@wheel/patterns": {
+      "name": "@wheel/patterns",
+      "type": "lib",
+      "data": {
+        "root": "packages/patterns",
+        "sourceRoot": "packages/patterns",
+        "name": "@wheel/patterns",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "outputs": [
+              "{projectRoot}/coverage"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "type-check": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "type-check"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "@wheel/layouts": {
+      "name": "@wheel/layouts",
+      "type": "lib",
+      "data": {
+        "root": "packages/layouts",
+        "sourceRoot": "packages/layouts",
+        "name": "@wheel/layouts",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "outputs": [
+              "{projectRoot}/coverage"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "type-check": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "type-check"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "@wheel/themes": {
+      "name": "@wheel/themes",
+      "type": "lib",
+      "data": {
+        "root": "packages/themes",
+        "sourceRoot": "packages/themes",
+        "name": "@wheel/themes",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "outputs": [
+              "{projectRoot}/coverage"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "type-check": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "type-check"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "@wheel/shared": {
+      "name": "@wheel/shared",
+      "type": "lib",
+      "data": {
+        "root": "packages/shared",
+        "sourceRoot": "packages/shared",
+        "name": "@wheel/shared",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "outputs": [
+              "{projectRoot}/coverage"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "type-check": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "type-check"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "@wheel/ui": {
+      "name": "@wheel/ui",
+      "type": "lib",
+      "data": {
+        "root": "packages/ui",
+        "sourceRoot": "packages/ui",
+        "name": "@wheel/ui",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "outputs": [
+              "{projectRoot}/coverage"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint"
+            },
+            "configurations": {}
+          },
+          "type-check": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "outputs": [],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "type-check"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "@wheel/workspace": [
+      {
+        "source": "@wheel/workspace",
+        "target": "@wheel/ui",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/workspace",
+        "target": "@wheel/patterns",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/workspace",
+        "target": "@wheel/themes",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/workspace",
+        "target": "@wheel/shared",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/workspace",
+        "target": "@wheel/layouts",
+        "type": "static"
+      }
+    ],
+    "@wheel/patterns": [
+      {
+        "source": "@wheel/patterns",
+        "target": "@wheel/ui",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/patterns",
+        "target": "@wheel/ui",
+        "type": "dynamic"
+      },
+      {
+        "source": "@wheel/patterns",
+        "target": "@wheel/shared",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/patterns",
+        "target": "@wheel/shared",
+        "type": "dynamic"
+      },
+      {
+        "source": "@wheel/patterns",
+        "target": "@wheel/themes",
+        "type": "static"
+      }
+    ],
+    "@wheel/layouts": [
+      {
+        "source": "@wheel/layouts",
+        "target": "@wheel/shared",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/layouts",
+        "target": "@wheel/shared",
+        "type": "dynamic"
+      },
+      {
+        "source": "@wheel/layouts",
+        "target": "@wheel/ui",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/layouts",
+        "target": "@wheel/ui",
+        "type": "dynamic"
+      },
+      {
+        "source": "@wheel/layouts",
+        "target": "@wheel/themes",
+        "type": "static"
+      }
+    ],
+    "@wheel/themes": [
+      {
+        "source": "@wheel/themes",
+        "target": "@wheel/shared",
+        "type": "static"
+      }
+    ],
+    "@wheel/shared": [],
+    "@wheel/ui": [
+      {
+        "source": "@wheel/ui",
+        "target": "@wheel/shared",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/ui",
+        "target": "@wheel/themes",
+        "type": "static"
+      },
+      {
+        "source": "@wheel/ui",
+        "target": "@wheel/layouts",
+        "type": "static"
+      }
+    ]
+  },
+  "version": "6.0"
+}

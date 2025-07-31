@@ -1,0 +1,18 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- App Icon 128x128 - Full Five Circles -->
+  
+  <!-- Circle 1 - Foundation -->
+  <circle cx="25" cy="64" r="10" fill="#1e1b4b" opacity="0.95"/>
+  
+  <!-- Circle 2 - Growth -->
+  <circle cx="42" cy="64" r="13" fill="#312e81" opacity="0.8"/>
+  
+  <!-- Circle 3 - Scale -->
+  <circle cx="64" cy="64" r="18" fill="#3730a3" opacity="0.65"/>
+  
+  <!-- Circle 4 - Optimize -->
+  <circle cx="90" cy="64" r="23" fill="#d97706" opacity="0.5"/>
+  
+  <!-- Circle 5 - Legacy -->
+  <circle cx="108" cy="64" r="18" fill="#f59e0b" opacity="0.35"/>
+</svg>

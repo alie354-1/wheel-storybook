@@ -1,0 +1,1 @@
+{"version":3,"file":"SignOutButton.d.ts","sourceRoot":"","sources":["../../src/components/SignOutButton.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAK1B,UAAU,kBAAkB;IAC1B,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,OAAO,CAAC,EAAE,SAAS,GAAG,WAAW,GAAG,MAAM,CAAC;CAC5C;AAED,QAAA,MAAM,aAAa,EAAE,KAAK,CAAC,EAAE,CAAC,kBAAkB,CA+B/C,CAAC;AAEF,eAAe,aAAa,CAAC"}

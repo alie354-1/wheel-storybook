@@ -1,0 +1,79 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.rulers": [100],
+  "editor.wordWrap": "off",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/coverage": true,
+    "**/.nyc_output": true,
+    "**/build": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/coverage": true,
+    "**/.nyc_output": true,
+    "**/build": true,
+    "**/package-lock.json": true
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    "packages/ui",
+    "packages/themes",
+    "packages/workspace",
+    "packages/patterns",
+    "packages/layouts",
+    "packages/shared"
+  ],
+  "jest.autoRun": "off",
+  "jest.showCoverageOnLoad": true,
+  "emmet.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#8B5CF6",
+    "activityBar.foreground": "#FFFFFF",
+    "statusBar.background": "#8B5CF6",
+    "statusBar.foreground": "#FFFFFF",
+    "titleBar.activeBackground": "#8B5CF6",
+    "titleBar.activeForeground": "#FFFFFF"
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "#6B7280",
+    "keywords": "#8B5CF6",
+    "strings": "#10B981",
+    "functions": "#F59E0B",
+    "variables": "#EF4444"
+  }
+}

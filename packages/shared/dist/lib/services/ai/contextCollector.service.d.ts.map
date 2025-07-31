@@ -1,0 +1,1 @@
+{"version":3,"file":"contextCollector.service.d.ts","sourceRoot":"","sources":["../../../../src/lib/services/ai/contextCollector.service.ts"],"names":[],"mappings":"AAGA;;;GAGG;AACH,qBAAa,uBAAuB;IAClC;;OAEG;IACU,qBAAqB,CAAC,gBAAgB,EAAE,MAAM,GAAG,OAAO,CAAC,GAAG,CAAC;IAmB1E;;OAEG;YACW,gBAAgB;IAmB9B;;OAEG;YACW,mBAAmB;IAmBjC;;OAEG;YACW,qBAAqB;CAgCpC"}

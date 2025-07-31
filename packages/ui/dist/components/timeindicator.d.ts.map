@@ -1,0 +1,1 @@
+{"version":3,"file":"timeindicator.d.ts","sourceRoot":"","sources":["../../src/components/timeindicator.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAG1B,MAAM,WAAW,kBAAkB;IACjC,IAAI,EAAE,IAAI,CAAC;IACX,SAAS,CAAC,EAAE,MAAM,CAAC;CACpB;AAED;;GAEG;AACH,eAAO,MAAM,aAAa,EAAE,KAAK,CAAC,EAAE,CAAC,kBAAkB,CAgBtD,CAAC;AAEF,eAAe,aAAa,CAAC"}

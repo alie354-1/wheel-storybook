@@ -1,0 +1,87 @@
+# Enhancement Backlog
+
+## Atoms
+- **Button**: Add context prop ✅
+- **Input**: Add validation context ✅
+- **Select**: Add loading states ✅
+- **Slider**: Add workspace theming ✅
+- **Textarea**: Add auto-resize ✅
+- **DatePicker**: Add timezone support
+- **FileUpload**: Add workspace scoping
+- **Text**: Add context styling
+- **Heading**: Add workspace branding
+- **Badge**: Add status variants
+- **Avatar**: Add workspace presence
+- **Icon**: Add workspace icons
+- **Image**: Add workspace assets
+- **Skeleton**: Add context variants
+- **Link**: Add workspace routing
+- **Spinner**: Add context colors
+- **ProgressBar**: Add milestone variants
+- **StatusDot**: Add workspace statuses
+- **Toast**: Add workspace context
+- **Alert**: Add workspace urgency
+- **ErrorBoundary**: Add workspace error handling
+- **Container**: Add workspace layouts
+- **Card**: Add workspace variants
+- **Panel**: Add workspace context
+- **NavItem**: Add workspace context
+- **Breadcrumb**: Add workspace paths
+- **Tab**: Add workspace variants
+- **Dropdown**: Add workspace actions
+- **Menu**: Add workspace context
+
+## Molecules
+- **FormField**: Add workspace validation
+- **SearchBar**: Add workspace scoping
+- **FilterPanel**: Add workspace filters
+- **DateRangePicker**: Add workspace timezones
+- **TagInput**: Add workspace tags
+- **RatingInput**: Add workspace context
+- **UserCard**: Add workspace context
+- **StatCard**: Add workspace metrics
+- **StatusCard**: Add workspace statuses
+- **ProgressCard**: Add workspace progress
+- **NotificationCard**: Add workspace context
+- **ActionCard**: Add workspace actions
+- **MetricDisplay**: Add workspace metrics
+- **AvatarGroup**: Add workspace teams
+- **TagCloud**: Add workspace tags
+- **ButtonGroup**: Add workspace actions
+- **ToggleGroup**: Add workspace variants
+- **Toolbar**: Add workspace tools
+- **ActionMenu**: Add workspace actions
+- **QuickActions**: Add workspace shortcuts
+- **SortControls**: Add workspace sorting
+- **BulkActions**: Add workspace bulk ops
+- **ChatMessage**: Add workspace context
+- **CommentBox**: Add workspace scoping
+- **ReplyThread**: Add workspace threading
+- **MentionInput**: Add workspace users
+
+## Organisms
+- **TopNavigation**: Add workspace context
+- **SideNavigation**: Add workspace navigation
+- **MobileNav**: Add workspace mobile nav
+- **BreadcrumbNav**: Add workspace paths
+- **TabNavigation**: Add workspace tabs
+- **DataTable**: Add workspace context
+- **DataGrid**: Add workspace variants
+- **CardGrid**: Add workspace cards
+- **Timeline**: Add workspace events
+- **ActivityFeed**: Add workspace activities
+- **Calendar**: Add workspace scheduling
+- **Kanban**: Add workspace tasks
+- **Dashboard**: Add workspace metrics
+- **FormBuilder**: Add workspace forms
+- **FormWizard**: Add workspace wizards
+- **SearchInterface**: Add workspace search
+- **AdvancedFilters**: Add workspace filters
+- **BulkEditor**: Add workspace bulk ops
+- **OnboardingForm**: Add workspace onboarding
+- **ProjectManager**: Add workspace projects
+- **TaskManager**: Add workspace tasks
+- **TeamManager**: Add workspace teams
+- **DocumentEditor**: Add workspace docs
+- **FileManager**: Add workspace files
+- **InvoiceManager**: Add workspace billing

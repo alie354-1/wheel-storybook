@@ -1,0 +1,117 @@
+import{j as e}from"./jsx-runtime-BdivIsZm.js";import{r as b,R as f}from"./vendor-CIaSNbmr.js";import{c as te}from"./cn-Bi5Kq-9L.js";import"./addressinput-DR7TMhaL.js";import"./alert-CmQfHnIB.js";import"./Avatar-DpmMIMRY.js";import"./badge-CCDj6nE-.js";import"./billingstatus-FUl2LzUo.js";import"./Breadcrumbs-CD8-NpFW.js";import"./button-CVrJYqSg.js";import"./card-CiIM_3zT.js";import"./checkbox-C1904Hbm.js";import{C as v}from"./clientbadge-B0vBhpoP.js";import"./collaboratoravatar-Cj5swjSt.js";import"./colorpicker-CP25QCKe.js";import"./consenttoggle-CWNbEheV.js";import"./currencyinput-DDECLqEx.js";import"./datepicker-CMcbHV_K.js";import"./documenttype-CE1WVI-a.js";import"./dropdown-menu-B74Grn0N.js";import"./EmptyState-DN3TLLmB.js";import"./expertisetag-DukMPJHx.js";import"./icon-n7_CnhNS.js";import"./image-Cvhw9Q6R.js";import"./input-Dghz61Zk.js";import"./label-M8x0GrR1.js";import"./loadingoverlay-DjyusYgl.js";import"./Logo-CikAc-tf.js";import"./modal-D4RiM4xB.js";import"./OnboardingWizard-rVn84COl.js";import"./Pagination-Cml1MfcN.js";import"./phoneinput-FjD8a10x.js";import"./progress-B0d5sHx6.js";import"./progressindicator-D_fPiVDx.js";import"./projectphase-BL3LsC6t.js";import"./richtexteditor-BZqFfy3-.js";import"./select-CWC_Y-a8.js";import"./separator-CCHR5v8x.js";import"./skeletonloader-D9azb5oV.js";import"./slider-3m5Aqiuu.js";import"./spinner-CPvlAmSZ.js";import"./StatusDot-BnZf1aWI.js";import"./switch-Ceff0QjZ.js";import"./tabs-BpPu-ig0.js";import"./textarea-CZkKCT_E.js";import"./timeindicator-Bsyu2Dbt.js";import"./timepicker-CHlwWyrs.js";import"./timerangeinput-BAd-BBKO.js";import"./toast-CIJrJnz7.js";import"./verticalslider-DWEhyKS6.js";import"./workspaceicon-C6jyzXCI.js";import"./container-Z7k16UFv.js";import"./flex-c2B3-bxM.js";import"./grid-DwXfsyQu.js";import"./panel-B-9ixgye.js";import"./stack-BHVBUkCW.js";import"./supabase-_6SMTDjj.js";import"./clsx-B-dksMZM.js";import"./x-DZ2Nmj4W.js";import"./createLucideIcon-CFfAzFt4.js";import"./chunk-QMGIS6GS-DcNV08QD.js";import"./index-Xt719Idm.js";import"./index-DmaVp8Gi.js";import"./index-CKrSpwSu.js";import"./index-Cnb6cu69.js";import"./index-YRhHAZgY.js";import"./check-BgTDyPES.js";import"./index-ClffgVbT.js";import"./Combination-CfN0ooRb.js";import"./index-Bhr8f8jx.js";import"./index-DZjeVAfm.js";import"./floating-ui.dom-DtF1XweH.js";import"./index-C_M4-wMA.js";import"./chevron-right-DCSbz_2P.js";import"./circle-CCrQh0AO.js";import"./users-C9yZEvey.js";import"./chevron-down-DDkHMo_x.js";import"./settings-D7npsBbE.js";import"./folder-D3RaKPRK.js";import"./index-Cgc55meF.js";import"./immer-3uZG5tlX.js";import"./toConsumableArray-BIhBLUu1.js";import"./bootstrap-L77bMaJk.js";const i=({clients:t,onSelect:N,className:l=""})=>{const[r,a]=b.useState(!1),[o,n]=b.useState(t[0]),ee=s=>{n(s),N(s),a(!1)};return e.jsxs("div",{className:te("relative",l),children:[e.jsx("button",{type:"button",className:"flex items-center space-x-2",onClick:()=>a(!r),children:e.jsx(v,{client:o})}),r&&e.jsx("div",{className:"absolute mt-2 w-48 bg-white rounded-md shadow-lg",children:t.map(s=>e.jsx("div",{className:"flex items-center space-x-2 p-2 hover:bg-gray-100 cursor-pointer",onClick:()=>ee(s),children:e.jsx(v,{client:s})},s.id))})]})};try{i.displayName="ClientSelector",i.__docgenInfo={description:"ClientSelector component for selecting a client.",displayName:"ClientSelector",props:{}}}catch{}const Ht={title:"Workspace/ClientSelector",component:i,parameters:{layout:"padded",docs:{description:{component:"A dropdown component for selecting clients within a workspace context. Displays client information using ClientBadge components."}}},tags:["autodocs"],argTypes:{clients:{control:"object",description:"Array of client objects to choose from"},onSelect:{action:"selected",description:"Callback fired when a client is selected"},className:{control:"text",description:"Additional CSS classes"}}},c=[{id:"client-1",name:"Acme Corporation",logo:"https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=32&h=32&fit=crop&crop=entropy"},{id:"client-2",name:"TechStart Inc.",logo:"https://images.unsplash.com/photo-1551434678-e076c223a692?w=32&h=32&fit=crop&crop=entropy"},{id:"client-3",name:"Global Solutions Ltd.",logo:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=32&h=32&fit=crop&crop=entropy"},{id:"client-4",name:"Innovation Labs",logo:"https://images.unsplash.com/photo-1497366216548-37526070297c?w=32&h=32&fit=crop&crop=entropy"},{id:"client-5",name:"Digital Dynamics"}],oe=[{id:"client-1",name:"Acme Corporation",logo:"https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=32&h=32&fit=crop&crop=entropy"},{id:"client-2",name:"TechStart Inc.",logo:"https://images.unsplash.com/photo-1551434678-e076c223a692?w=32&h=32&fit=crop&crop=entropy"}],m={args:{clients:c,onSelect:t=>console.log("Selected client:",t)}},p={args:{clients:oe,onSelect:t=>console.log("Selected client:",t)}},d={args:{clients:[c[0]],onSelect:t=>console.log("Selected client:",t)}},g={args:{clients:[{id:"client-1",name:"Client Alpha"},{id:"client-2",name:"Client Beta"},{id:"client-3",name:"Client Gamma"}],onSelect:t=>console.log("Selected client:",t)}},h={args:{clients:[{id:"client-1",name:"Very Long Client Name That Might Overflow",logo:"https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=32&h=32&fit=crop&crop=entropy"},{id:"client-2",name:"Another Extremely Long Client Name Corporation Ltd.",logo:"https://images.unsplash.com/photo-1551434678-e076c223a692?w=32&h=32&fit=crop&crop=entropy"},{id:"client-3",name:"Short Name"}],onSelect:t=>console.log("Selected client:",t)}},u={args:{clients:c,onSelect:t=>console.log("Selected client:",t),className:"border-2 border-blue-300 rounded-lg p-2"}},S={render:()=>{const[t,N]=f.useState(null),[l,r]=f.useState([]),a=o=>{N(o),r(n=>[o,...n.slice(0,4)])};return e.jsxs("div",{className:"space-y-6",children:[e.jsxs("div",{children:[e.jsx("h3",{className:"text-lg font-semibold mb-2",children:"Client Selector"}),e.jsx(i,{clients:c,onSelect:a})]}),t&&e.jsxs("div",{className:"p-4 bg-blue-50 rounded-lg",children:[e.jsx("h4",{className:"font-semibold text-blue-800",children:"Currently Selected:"}),e.jsxs("p",{className:"text-blue-700",children:[t.name," (ID: ",t.id,")"]})]}),l.length>0&&e.jsxs("div",{className:"p-4 bg-gray-50 rounded-lg",children:[e.jsx("h4",{className:"font-semibold text-gray-800 mb-2",children:"Selection History:"}),e.jsx("div",{className:"space-y-1",children:l.map((o,n)=>e.jsxs("div",{className:"text-sm text-gray-600",children:[n+1,". ",o.name]},`${o.id}-${n}`))})]})]})}},x={render:()=>e.jsxs("div",{className:"space-y-4",children:[e.jsxs("div",{className:"flex items-center justify-between p-4 bg-gray-100 rounded-lg",children:[e.jsxs("div",{children:[e.jsx("h3",{className:"font-semibold",children:"Current Workspace"}),e.jsx("p",{className:"text-sm text-gray-600",children:"Consultant Dashboard"})]}),e.jsxs("div",{className:"flex items-center space-x-2",children:[e.jsx("span",{className:"text-sm text-gray-600",children:"Client:"}),e.jsx(i,{clients:c,onSelect:t=>console.log("Switched to client:",t)})]})]}),e.jsxs("div",{className:"p-4 border rounded-lg",children:[e.jsx("h4",{className:"font-semibold mb-2",children:"Client-Specific Content"}),e.jsx("p",{className:"text-gray-600",children:"This content would change based on the selected client above."})]})]})},y={args:{clients:[],onSelect:t=>console.log("Selected client:",t)}},C={render:()=>e.jsxs("div",{className:"space-y-4",children:[e.jsx("div",{className:"animate-pulse",children:e.jsx("div",{className:"h-8 bg-gray-200 rounded w-48"})}),e.jsx("p",{className:"text-sm text-gray-500",children:"This would typically show a loading state while clients are being fetched."})]})};var j,w,L;m.parameters={...m.parameters,docs:{...(j=m.parameters)==null?void 0:j.docs,source:{originalSource:`{
+  args: {
+    clients: mockClients,
+    onSelect: client => console.log('Selected client:', client)
+  }
+}`,...(L=(w=m.parameters)==null?void 0:w.docs)==null?void 0:L.source}}};var k,D,I;p.parameters={...p.parameters,docs:{...(k=p.parameters)==null?void 0:k.docs,source:{originalSource:`{
+  args: {
+    clients: smallClientList,
+    onSelect: client => console.log('Selected client:', client)
+  }
+}`,...(I=(D=p.parameters)==null?void 0:D.docs)==null?void 0:I.source}}};var _,A,H;d.parameters={...d.parameters,docs:{...(_=d.parameters)==null?void 0:_.docs,source:{originalSource:`{
+  args: {
+    clients: [mockClients[0]],
+    onSelect: client => console.log('Selected client:', client)
+  }
+}`,...(H=(A=d.parameters)==null?void 0:A.docs)==null?void 0:H.source}}};var T,E,W;g.parameters={...g.parameters,docs:{...(T=g.parameters)==null?void 0:T.docs,source:{originalSource:`{
+  args: {
+    clients: [{
+      id: 'client-1',
+      name: 'Client Alpha'
+    }, {
+      id: 'client-2',
+      name: 'Client Beta'
+    }, {
+      id: 'client-3',
+      name: 'Client Gamma'
+    }],
+    onSelect: client => console.log('Selected client:', client)
+  }
+}`,...(W=(E=g.parameters)==null?void 0:E.docs)==null?void 0:W.source}}};var O,R,B;h.parameters={...h.parameters,docs:{...(O=h.parameters)==null?void 0:O.docs,source:{originalSource:`{
+  args: {
+    clients: [{
+      id: 'client-1',
+      name: 'Very Long Client Name That Might Overflow',
+      logo: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=32&h=32&fit=crop&crop=entropy'
+    }, {
+      id: 'client-2',
+      name: 'Another Extremely Long Client Name Corporation Ltd.',
+      logo: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=32&h=32&fit=crop&crop=entropy'
+    }, {
+      id: 'client-3',
+      name: 'Short Name'
+    }],
+    onSelect: client => console.log('Selected client:', client)
+  }
+}`,...(B=(R=h.parameters)==null?void 0:R.docs)==null?void 0:B.source}}};var $,G,M;u.parameters={...u.parameters,docs:{...($=u.parameters)==null?void 0:$.docs,source:{originalSource:`{
+  args: {
+    clients: mockClients,
+    onSelect: client => console.log('Selected client:', client),
+    className: 'border-2 border-blue-300 rounded-lg p-2'
+  }
+}`,...(M=(G=u.parameters)==null?void 0:G.docs)==null?void 0:M.source}}};var V,K,q;S.parameters={...S.parameters,docs:{...(V=S.parameters)==null?void 0:V.docs,source:{originalSource:`{
+  render: () => {
+    const [selectedClient, setSelectedClient] = React.useState<Client | null>(null);
+    const [selectionHistory, setSelectionHistory] = React.useState<Client[]>([]);
+    const handleSelect = (client: Client) => {
+      setSelectedClient(client);
+      setSelectionHistory(prev => [client, ...prev.slice(0, 4)]); // Keep last 5 selections
+    };
+    return <div className="space-y-6">
+        <div>
+          <h3 className="text-lg font-semibold mb-2">Client Selector</h3>
+          <ClientSelector clients={mockClients} onSelect={handleSelect} />
+        </div>
+
+        {selectedClient && <div className="p-4 bg-blue-50 rounded-lg">
+            <h4 className="font-semibold text-blue-800">Currently Selected:</h4>
+            <p className="text-blue-700">
+              {selectedClient.name} (ID: {selectedClient.id})
+            </p>
+          </div>}
+
+        {selectionHistory.length > 0 && <div className="p-4 bg-gray-50 rounded-lg">
+            <h4 className="font-semibold text-gray-800 mb-2">Selection History:</h4>
+            <div className="space-y-1">
+              {selectionHistory.map((client, index) => <div key={\`\${client.id}-\${index}\`} className="text-sm text-gray-600">
+                  {index + 1}. {client.name}
+                </div>)}
+            </div>
+          </div>}
+      </div>;
+  }
+}`,...(q=(K=S.parameters)==null?void 0:K.docs)==null?void 0:q.source}}};var z,F,J;x.parameters={...x.parameters,docs:{...(z=x.parameters)==null?void 0:z.docs,source:{originalSource:`{
+  render: () => <div className="space-y-4">
+      <div className="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
+        <div>
+          <h3 className="font-semibold">Current Workspace</h3>
+          <p className="text-sm text-gray-600">Consultant Dashboard</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-sm text-gray-600">Client:</span>
+          <ClientSelector clients={mockClients} onSelect={client => console.log('Switched to client:', client)} />
+        </div>
+      </div>
+
+      <div className="p-4 border rounded-lg">
+        <h4 className="font-semibold mb-2">Client-Specific Content</h4>
+        <p className="text-gray-600">
+          This content would change based on the selected client above.
+        </p>
+      </div>
+    </div>
+}`,...(J=(F=x.parameters)==null?void 0:F.docs)==null?void 0:J.source}}};var P,Q,U;y.parameters={...y.parameters,docs:{...(P=y.parameters)==null?void 0:P.docs,source:{originalSource:`{
+  args: {
+    clients: [],
+    onSelect: client => console.log('Selected client:', client)
+  }
+}`,...(U=(Q=y.parameters)==null?void 0:Q.docs)==null?void 0:U.source}}};var X,Y,Z;C.parameters={...C.parameters,docs:{...(X=C.parameters)==null?void 0:X.docs,source:{originalSource:`{
+  render: () => <div className="space-y-4">
+      <div className="animate-pulse">
+        <div className="h-8 bg-gray-200 rounded w-48"></div>
+      </div>
+      <p className="text-sm text-gray-500">
+        This would typically show a loading state while clients are being fetched.
+      </p>
+    </div>
+}`,...(Z=(Y=C.parameters)==null?void 0:Y.docs)==null?void 0:Z.source}}};const Tt=["Default","SmallList","SingleClient","NoLogos","LongNames","WithCustomStyling","InteractiveDemo","InWorkspaceContext","EmptyState","LoadingState"];export{m as Default,y as EmptyState,x as InWorkspaceContext,S as InteractiveDemo,C as LoadingState,h as LongNames,g as NoLogos,d as SingleClient,p as SmallList,u as WithCustomStyling,Tt as __namedExportsOrder,Ht as default};

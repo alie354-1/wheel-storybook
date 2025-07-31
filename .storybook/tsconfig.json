@@ -1,0 +1,57 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+    "types": [
+      "node",
+      "jest",
+      "react",
+      "react-dom",
+      "@types/react",
+      "@types/react-dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@wheel/ui": ["../packages/ui/src"],
+      "@wheel/patterns": ["../packages/patterns/src"],
+      "@wheel/layouts": ["../packages/layouts/src"],
+      "@wheel/themes": ["../packages/themes/src"],
+      "@wheel/workspace": ["../packages/workspace/src"],
+      "@wheel/shared/*": ["../packages/shared/src/*"],
+      "@wheel/ui/*": ["../packages/ui/src/*"],
+      "@wheel/patterns/*": ["../packages/patterns/src/*"],
+      "@wheel/layouts/*": ["../packages/layouts/src/*"],
+      "@wheel/themes/*": ["../packages/themes/src/*"],
+      "@wheel/workspace/*": ["../packages/workspace/src/*"]
+    }
+  },
+  "include": [
+    "../packages/*/src/**/*",
+    "../packages/*/src/**/*.stories.*",
+    "../packages/*/src/**/*.docs.*",
+    "./**/*"
+  ],
+  "exclude": [
+    "../packages/*/node_modules",
+    "../packages/*/dist"
+  ]
+}

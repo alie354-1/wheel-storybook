@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@wheel/shared/*": ["../shared/src/*"],
+      "@wheel/ui": ["../ui/src"],
+      "@wheel/ui/*": ["../ui/src/*"]
+    }
+  },
+  "include": ["src/**/*", "../shared/src/**/*", "../ui/src/**/*"],
+  "exclude": ["dist", "node_modules", "**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx"]
+}

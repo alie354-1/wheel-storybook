@@ -1,0 +1,22 @@
+<svg width="150" height="120" viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stacked Logo - Vertical Layout -->
+  
+  <!-- Circle 1 - Foundation -->
+  <circle cx="30" cy="30" r="8" fill="#1e1b4b" opacity="0.95"/>
+  
+  <!-- Circle 2 - Growth -->
+  <circle cx="45" cy="30" r="10" fill="#312e81" opacity="0.8"/>
+  
+  <!-- Circle 3 - Scale -->
+  <circle cx="65" cy="30" r="14" fill="#3730a3" opacity="0.65"/>
+  
+  <!-- Circle 4 - Optimize -->
+  <circle cx="90" cy="30" r="18" fill="#d97706" opacity="0.5"/>
+  
+  <!-- Circle 5 - Legacy -->
+  <circle cx="120" cy="30" r="25" fill="#f59e0b" opacity="0.3"/>
+  
+  <!-- Wordmark Stacked -->
+  <text x="75" y="75" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#1e1b4b" text-anchor="middle">THE</text>
+  <text x="75" y="100" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#1e1b4b" text-anchor="middle">WHEEL</text>
+</svg>

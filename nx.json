@@ -1,0 +1,99 @@
+{
+  "version": 2,
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "./scripts/custom-task-runner.js",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "type-check"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "default",
+        "^production",
+        "{workspaceRoot}/jest.preset.js"
+      ],
+      "outputs": [
+        "{projectRoot}/coverage"
+      ]
+    },
+    "lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json"
+      ],
+      "outputs": []
+    },
+    "type-check": {
+      "inputs": [
+        "default",
+        "^production"
+      ],
+      "outputs": []
+    }
+  },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/*.spec.ts",
+      "!{projectRoot}/**/*.test.ts",
+      "!{projectRoot}/**/*.spec.tsx",
+      "!{projectRoot}/**/*.test.tsx"
+    ]
+  },
+  "projects": {
+    "shared": {
+      "root": "packages/shared",
+      "sourceRoot": "packages/shared/src",
+      "projectType": "library"
+    },
+    "themes": {
+      "root": "packages/themes",
+      "sourceRoot": "packages/themes/src",
+      "projectType": "library"
+    },
+    "ui": {
+      "root": "packages/ui",
+      "sourceRoot": "packages/ui/src",
+      "projectType": "library"
+    },
+    "patterns": {
+      "root": "packages/patterns",
+      "sourceRoot": "packages/patterns/src",
+      "projectType": "library"
+    },
+    "layouts": {
+      "root": "packages/layouts",
+      "sourceRoot": "packages/layouts/src",
+      "projectType": "library"
+    },
+    "workspace": {
+      "root": "packages/workspace",
+      "sourceRoot": "packages/workspace/src",
+      "projectType": "library"
+    }
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json"
+}
